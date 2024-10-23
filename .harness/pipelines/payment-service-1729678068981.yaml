@@ -26,10 +26,19 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: Test
+                  name: Unit Test with TI
+                  identifier: Unit_Test_with_TI
+                  spec:
+                    shell: Sh
+                    command: |
+                      cd payment-service
+                    intelligenceMode: true
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
