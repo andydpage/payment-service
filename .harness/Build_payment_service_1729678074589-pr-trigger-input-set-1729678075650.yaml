@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_payment_service_1729678074589-pr-trigger-input-set
+  identifier: Build_payment_service_1729678074589prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CI_Testing
+  pipeline:
+    identifier: Build_payment_service_1729678074589
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
