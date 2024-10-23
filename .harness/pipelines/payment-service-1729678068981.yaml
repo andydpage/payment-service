@@ -32,8 +32,9 @@ pipeline:
                   identifier: Unit_Test_with_TI
                   spec:
                     shell: Sh
-                    command: |
+                    command: |-
                       cd payment-service
+                      mvn clean test
                     intelligenceMode: true
           platform:
             os: Linux
