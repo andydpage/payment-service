@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_payment_service_1729678074589
+  name: Build payment-service
+  orgIdentifier: default
+  projectIdentifier: CI_Testing
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.andydpage
+        repoName: payment-service
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
